@@ -24,3 +24,8 @@ Run
 
 Run `shotgun -p 4567 app.rb` inside the `cs160-interactive` folder.
 
+Sinatra-Partial
+===============
+
+Read more: https://github.com/yb66/Sinatra-Partial
+

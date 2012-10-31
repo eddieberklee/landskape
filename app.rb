@@ -1,9 +1,13 @@
 require 'rubygems'
 require 'sinatra'
 require 'sass'
+require 'sinatra/partial'
 
 get '/' do
-  haml :index
+  output = ""
+  output << partial( :"navbar" )
+  output << partial( :"index" )
+  output
 end
 
 get '/css/*.sass' do
