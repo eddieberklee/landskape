@@ -3,20 +3,25 @@ require 'sinatra'
 require 'sass'
 require 'sinatra/partial'
 
-configure do
-  set :public_folder, Proc.new { File.join(root, "static") }
-end
+set :public_folder, File.dirname(__FILE__) + '/public'
 
 get '/' do
   output = ""
+  output << partial( :"index-top" )
   output << partial( :"navbar" )
   output << partial( :"filters" )
   output << partial( :"index" )
+  output << partial( :"index-bottom" )
   output
 end
 
-get '/css/*.sass' do
-  content_type 'text/css', :charset => 'utf-8'
+get '/css/*.hi' do
+  set :views, File.dirname(__FILE__) + '/public/css'
+  sass "style".to_sym
+end
+
+get '/stylesheets/*.sass' do
+  set :views, File.dirname(__FILE__) + '/public/css'
   filename = params[:splat].first
-  sass ('../css/' + filename).to_sym
+  sass filename.to_sym
 end
