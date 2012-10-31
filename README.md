@@ -1,9 +1,7 @@
-frontend
-========
+CS160 Interactive Prototype
+===========================
 
-my front-end development flo
-
-my necessary tools/scripts for doing efficient front-end work :)
+Due 11/5.
 
 Installation
 ============
