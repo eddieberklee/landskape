@@ -1,0 +1,5 @@
+# ignore sass cache
+.sass-cache*
+
+# Ignore vim swap files:
+*.sw*
