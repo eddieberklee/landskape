@@ -3,9 +3,14 @@ require 'sinatra'
 require 'sass'
 require 'sinatra/partial'
 
+configure do
+  set :public_folder, Proc.new { File.join(root, "static") }
+end
+
 get '/' do
   output = ""
   output << partial( :"navbar" )
+  output << partial( :"filters" )
   output << partial( :"index" )
   output
 end
