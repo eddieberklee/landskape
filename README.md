@@ -9,8 +9,8 @@ Installation
 First install Ruby and RubyGems. Search Google for instructions for your particular OS.
 
 Install HAML + SASS:
-* HAML: haml-lang.com
-* SASS: sass-lang.com 
+* HAML: http://haml-lang.com
+* SASS: http://sass-lang.com
 
 Gem Installs:
 * `sudo gem install sinatra`
