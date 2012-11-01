@@ -1,15 +1,40 @@
 // filters.sass
 // description: css for the filters bar
 
-@font-face
-  font-family: "NovecentoWideMedium"
-  src: url("fonts/novecentowide-medium-webfont.eot")
-  font-weight: normal
-  font-style: normal
+@import "vspacer_num"
+@import "css3_mixins"
+
+$filters-background: #eee
+
+#filters-bar
+  background-color: darken($filters-background,5%)
+  padding-top:    7px
+  padding-bottom: 7px
 
 .filters-item
   width: auto
   padding: 3px
   padding-left: 5px
   padding-right: 5px
-  font: 11px/12px 'NovecentoWideMedium'
+  text-transform: uppercase
+  font-size: 10.5px
+  background-color: $filters-background
+  float: left
+  margin-left:  4px
+  margin-right: 4px
+  @include css3-box-shadow(0px,1px,3px,rgba(0,0,0,0.4))
+  cursor: pointer
+  border-top: 1px solid rgba(255,255,255,0.8)
+  @include css3-transition(background-color,0.1s)
+  @include css3-border-radius(1px)
+  @include css3-user-select
+  
+  &:hover
+    background-color: darken($filters-background,5%)
+    border-top: 1px solid rgba(255,255,255,0.1)
+  &:active
+    position: relative
+    top: 1px
+
+
+
