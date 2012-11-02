@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'bundler/setup'
 require 'sass'
+require 'haml'
 require 'sinatra/partial'
 
 set :public_folder, File.dirname(__FILE__) + '/public'

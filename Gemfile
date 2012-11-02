@@ -1,3 +1,6 @@
 source "http://rubygems.org"
-gem "sass"
-gem "haml"
+gem 'sinatra'
+gem 'sinatra-partial'
+gem 'bundle'
+gem 'haml'
+gem 'sass'
