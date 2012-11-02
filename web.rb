@@ -1,9 +1,9 @@
 require 'rubygems'
 require 'sinatra'
+require 'bundler/setup'
 require 'sass'
 require 'sinatra/partial'
 
-# Set the static files 
 set :public_folder, File.dirname(__FILE__) + '/public'
 
 get '/' do
