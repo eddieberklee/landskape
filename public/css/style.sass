@@ -1,4 +1,4 @@
-// style.sass
+// STYLE.SASS
 // description: main global css file
 
 @import "vspacer_num"
@@ -8,6 +8,24 @@
   clear: both
 
 body
-  background-color: #FFF
+  // background-color: #fff
+  background-color: #ddd
+
+.column1,.column2,.column3
+  padding: 10px
+  float: left
+
+$pic-thumb-width: 300px
+$pic-thumb-height: 170px
+.pic-thumb
+  width: $pic-thumb-width
+  height: $pic-thumb-height
+  outline: 1px solid #aaa
+  overflow: hidden
+  margin-bottom: 20px
+
+  img
+    position: relative
+    top: -30px
 
 
