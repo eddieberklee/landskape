@@ -8,12 +8,13 @@ set :public_folder, File.dirname(__FILE__) + '/public'
 
 get '/' do
   output = ""
-  output << partial( :"index-top", :locals => { css_file: 'index'} )
-  output << partial( :"navbar" )
-  output << partial( :"filters" )
-  output << partial( :"index" )
-  output << partial( :"index-bottom" )
-  output
+#output << partial( :"index-top", :locals => { css_file: 'index'} )
+#output << partial( :"navbar" )
+#output << partial( :"filters" )
+#output << partial( :"index" )
+#output << partial( :"index-bottom" )
+#output
+  "hiasldkfj"
 end
 
 get '/css/*.hi' do
