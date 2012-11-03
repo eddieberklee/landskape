@@ -5,6 +5,12 @@
 @import "vspacer_num"
 @import "css3_mixins"
 
+$filters-text-font-size: 12.5px
+.filters-text
+  text-transform: lowercase
+  font-size: $filters-text-font-size
+  letter-spacing: 0.05em
+
 #filters-bar
   width: 900px
   //background-color: darken($filters-background,5%)
@@ -14,11 +20,7 @@
   @include css3-border-radius(6px)
   margin-top:    16px
   margin-bottom: 16px
-
-.filters-text
-  text-transform: lowercase
-  font-size: 12.5px
-  letter-spacing: 0.05em
+  font-size: $filters-text-font-size
 
 .filters-item
   width: auto
@@ -49,5 +51,4 @@
     position: relative
     top: 1px
 
-lll
 

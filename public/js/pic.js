@@ -3,13 +3,20 @@ $(function() {
 
   $(".pic-thumb").hover(
     function() {
+      id = $(this).attr('id');
+      $(this).stop(id, true, false);
       $(this).children(".pic-thumb-hover-content").animate({
-        bottom: '+=40px',
+        bottom: '0px',
+        queue: id,
       },200);
     },
     function() {
+      id = $(this).attr('id');
+      $height = $(this).children(".pic-thumb-hover-content").css('height');
+      $(this).stop(id, true, false);
       $(this).children(".pic-thumb-hover-content").animate({
-        bottom: '-=40px',
+        bottom: '-' + $height,
+        queue: id,
       },200);
     });
 

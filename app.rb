@@ -8,10 +8,22 @@ set :public_folder, File.dirname(__FILE__) + '/public'
 
 get '/' do
   output = ""
-  output << partial( :"index-top", :locals => { css_file: 'index'} )
+  output << partial( :"index-top" )
   output << partial( :"navbar" )
   output << partial( :"filters" )
   output << partial( :"index" )
+  output << partial( :"index-bottom" )
+  output
+end
+
+get '/upload' do
+  output = ""
+  output << partial( :"index-top" )
+  output << partial( :"navbar" )
+  output << partial( :"filters" )
+
+  output << partial( :"upload" )
+
   output << partial( :"index-bottom" )
   output
 end
