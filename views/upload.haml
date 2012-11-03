@@ -1,0 +1,25 @@
+.container
+  %div.span12
+    %h1
+      Upload a Landskape
+  %div.span5#upload-left{:style => "float:left;"}
+    #upload-box
+      #drag-and-drop
+      #file-browse
+        %input{:type=>"text", :style=>"float:left"}
+        %input{:type=>"submit", :style=>"float:right"}
+        .clear
+  %div.span5#upload-right{:style => "float:left;"}
+    %label Title
+    %input{:type=>"text"}
+    %label Description
+    %input{:type=>"text"}
+
+    %label City
+    %input{:type=>"text"}
+    %label State
+    %input{:type=>"text"}
+    %br
+    %a.btn.btn-warning
+      Upload
+  .clear
