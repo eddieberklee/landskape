@@ -1,6 +1,7 @@
 // STYLE.SASS
 // description: main global css file
 
+@import "variables"
 @import "vspacer_num"
 @import "css3_mixins"
 
@@ -9,16 +10,16 @@
 
 body
   // background-color: #fff
-  background-color: #ddd
+  background-color: $filters-background
 
 $container_width: 900px
-#container
-  width: $container_width
-  margin: 0 auto
 
 .column1,.column2,.column3
   padding: 10px
   float: left
+
+.container
+  padding-top: 20px
 
 $pic-thumb-width: 280px
 $pic-thumb-height: 160px
@@ -26,11 +27,40 @@ $pic-thumb-height: 160px
   width: $pic-thumb-width
   height: $pic-thumb-height
   outline: 1px solid #aaa
+  position: relative
   overflow: hidden
   margin-bottom: 20px
-
-  img
+  cursor: pointer
+  img.pic
     position: relative
     top: -30px
+
+.pic-thumb-hover-content
+  $h: 35px
+  position: absolute
+  bottom: 0 - ($h + 5px)
+
+  padding-top: 5px
+
+  $pic-padding-right: 5px
+  width: $pic-thumb-width - $pic-padding-right
+  padding-right: $pic-padding-right
+
+  height: $h
+  z-index: 2
+  background-color: rgba(0,0,0,0.4)
+  img
+    float: right
+    padding-left:   5px
+    padding-right:  5px
+    padding-top:    6px
+    padding-bottom: 5px
+    &:active
+      background-color: desaturate(lighten(red,30%),10%)
+  a
+    float: right
+    margin-right: 5px
+    @include css3-border-radius(6px)
+
 
 
