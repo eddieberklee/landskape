@@ -3,11 +3,11 @@ require 'sinatra'
 require 'sass'
 require 'sinatra/partial'
 
-# Set the static files 
+# Set the static files
 set :public_folder, File.dirname(__FILE__) + '/public'
-set :views, File.dirname(__FILE__) + '/views'
 
 get '/' do
+  set :views, File.dirname(__FILE__) + '/views'
   output = ""
   output << partial( :"index-top" )
   output << partial( :"navbar" )
@@ -18,6 +18,7 @@ get '/' do
 end
 
 get '/upload' do
+  set :views, File.dirname(__FILE__) + '/views'
   output = ""
   output << partial( :"index-top" )
   output << partial( :"navbar" )
