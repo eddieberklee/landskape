@@ -5,6 +5,7 @@ require 'sinatra/partial'
 
 # Set the static files 
 set :public_folder, File.dirname(__FILE__) + '/public'
+set :views, File.dirname(__FILE__) + '/views'
 
 get '/' do
   output = ""
@@ -26,11 +27,6 @@ get '/upload' do
 
   output << partial( :"index-bottom" )
   output
-end
-
-get '/css/*.hi' do
-  set :views, File.dirname(__FILE__) + '/public/css'
-  sass "style".to_sym
 end
 
 get '/stylesheets/*.sass' do
