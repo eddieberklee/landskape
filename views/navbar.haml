@@ -10,14 +10,16 @@
             %button.btn{:type=>"submit"}
               %i.icon-search
       %div#upload
-        %a.btn
+        %a.btn{:href => "/upload"}
           Upload
           %i.icon-picture
       %div#login-logout
         %a.btn.btn-primary
           Login
       %div#who-logged-in
-        Logged in as: #{username}
+        Logged in as:
+        %a{:href => "/user"}
+          #{username}
       .clear
     .clear
 

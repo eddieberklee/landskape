@@ -13,9 +13,11 @@ $(function() {
     function() {
       id = $(this).attr('id');
       $height = $(this).children(".pic-thumb-hover-content").css('height');
+      $padding_top = $(this).children(".pic-thumb-hover-content").css('padding-top');
+      $padding_bottom = $(this).children(".pic-thumb-hover-content").css('padding-bottom');
       $(this).stop(id, true, false);
       $(this).children(".pic-thumb-hover-content").animate({
-        bottom: '-' + $height,
+        bottom: '-' + (parseInt($height) + parseInt($padding_top) + parseInt($padding_bottom)),
         queue: id,
       },200);
     });
