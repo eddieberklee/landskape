@@ -1,10 +1,17 @@
 // navbar.sass
 // description: css for the navigation bar
+
+@import "css3_mixins"
+
 #navbar
   background: inherit
+  margin-top: 10px
 
 #logo
   cursor: pointer
+  &:hover
+    @include css3-border-radius(5px)
+    @include css3-box-shadow(0px,0px,6px,rgba(0,0,0,0.1))
 
 #logo, #search, #upload, #login-logout, #who-logged-in
   float: left
