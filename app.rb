@@ -9,7 +9,7 @@ set :public_folder, File.dirname(__FILE__) + '/public'
 get '/' do
   set :views, File.dirname(__FILE__) + '/views'
   output = ""
-  output << partial( :"index-top" )
+  output << partial( :"index-top", :locals => {title: 'Index'} )
   output << partial( :"navbar" )
   output << partial( :"filters" )
   output << partial( :"index" )
