@@ -30,6 +30,10 @@ get '/upload' do
   output
 end
 
+get '/name/:id' do
+  params[:id]
+end
+
 get '/stylesheets/*.sass' do
   set :views, File.dirname(__FILE__) + '/public/css'
   filename = params[:splat].first
