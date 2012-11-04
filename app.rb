@@ -30,6 +30,17 @@ get '/upload' do
   output
 end
 
+get '/user' do
+  set :views, File.dirname(__FILE__) + '/views'
+  output = ""
+  output << partial(:"index-top")
+  output << partial(:"navbar")
+  output << partial(:"filters")
+  output << partial(:"userpage")
+  output << partial(:"index-bottom")
+  output
+end
+
 get '/stylesheets/*.sass' do
   set :views, File.dirname(__FILE__) + '/public/css'
   filename = params[:splat].first
