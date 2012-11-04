@@ -30,6 +30,10 @@ get '/upload' do
   output
 end
 
+get '/name/:id' do
+  params[:id]
+end
+
 get '/user' do
   set :views, File.dirname(__FILE__) + '/views'
   output = ""
