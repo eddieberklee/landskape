@@ -13,6 +13,7 @@ get '/' do
   output << partial( :"navbar", :locals => {username: 'amadeus'} )
   output << partial( :"filters" )
   output << partial( :"index" )
+  output << partial( :"pics" )
   output << partial( :"index-bottom" )
   output
 end
@@ -40,7 +41,8 @@ get '/user' do
   output << partial(:"index-top", :locals => {title: 'Upload'} )
   output << partial( :"navbar", :locals => {username: 'amadeus'} )
   output << partial(:"filters")
-  output << partial(:"userpage")
+  output << partial(:"userpage", :locals => {user: 'mozart', desc: 'I am a music god and prodigy. All at the same time'})
+  output << partial(:"pics")
   output << partial(:"index-bottom")
   output
 end

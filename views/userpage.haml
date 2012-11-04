@@ -1,15 +1,9 @@
 .container
   %h1
-    [photographer]'s photos
-  %div More Info about [photographer]
-  .user-bio
-    This is a simple bio about a random photographer
+    #{user}'s photos
+  %div More Info about #{user}:
+  .user-bio{:style => "height: 0px"}
+    #{desc}
   .show-bar
-    %div.btn
+    .btn#showbutton
       show
-  .img
-    %a{:href => " "} lol first
-  .img
-    %a{:href => " "} lol second
-  .img
-    %a{:href => " "} lol third
