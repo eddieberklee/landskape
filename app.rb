@@ -20,7 +20,7 @@ end
 get '/upload' do
   set :views, File.dirname(__FILE__) + '/views'
   output = ""
-  output << partial( :"index-top" )
+  output << partial( :"index-top", :locals => {title: 'Upload'} )
   output << partial( :"navbar" )
   output << partial( :"filters" )
 
@@ -37,7 +37,7 @@ end
 get '/user' do
   set :views, File.dirname(__FILE__) + '/views'
   output = ""
-  output << partial(:"index-top")
+  output << partial(:"index-top", :locals => {title: 'Upload'} )
   output << partial(:"navbar")
   output << partial(:"filters")
   output << partial(:"userpage")
