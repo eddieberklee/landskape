@@ -1,15 +1,16 @@
 .container
   %div.span12
-    %h1
+    %h3
       Upload a Landskape
   %div.span5#upload-left{:style => "float:left;"}
     #upload-box
       #drag-and-drop
+        %span{:style=>"position:relative;top:80px;left:35px;font-size:1.2em;width:200px;"}
+          Drag and drop your landskape here!
       #file-browse
-        %input{:type=>"text", :style=>"float:left"}
-        %input{:type=>"submit", :style=>"float:right"}
+        %input{:type=>"file", :style=>"margin-bottom:10px;"}
         .clear
-  %div.span5#upload-right{:style => "float:left;"}
+  %div.span4#upload-right{:style => "float:left;"}
     %label Title
     %input{:type=>"text"}
     %label Description

@@ -37,11 +37,36 @@ end
 
 get '/user' do
   set :views, File.dirname(__FILE__) + '/views'
+	user = 'amadeus'
   output = ""
-  output << partial( :"index-top", :locals => {:title => 'User amadeus'} )
-  output << partial( :"navbar", :locals => {:username => 'amadeus'} )
+  output << partial( :"index-top", :locals => {:title => 'User '+user} )
+  output << partial( :"navbar", :locals => {:username => user} )
   output << partial( :"filters")
-  output << partial( :"userpage", :locals => {:user => 'mozart', :desc => 'I am a music god and prodigy. All at the same time'})
+  output << partial( :"userpage", :locals => {:user => user, :desc => 'I am a music god and prodigy. All at the same time'})
+  output << partial( :"pics")
+  output << partial( :"index-bottom")
+  output
+end
+get '/userchopin' do
+  set :views, File.dirname(__FILE__) + '/views'
+	user = 'chopin'
+  output = ""
+  output << partial( :"index-top", :locals => {:title => 'User '+user} )
+  output << partial( :"navbar", :locals => {:username => user} )
+  output << partial( :"filters")
+  output << partial( :"userpage", :locals => {:user => user, :desc => 'I am a music god and prodigy. All at the same time'})
+  output << partial( :"pics")
+  output << partial( :"index-bottom")
+  output
+end
+get '/userliszt' do
+  set :views, File.dirname(__FILE__) + '/views'
+	user = 'liszt'
+  output = ""
+  output << partial( :"index-top", :locals => {:title => 'User '+user} )
+  output << partial( :"navbar", :locals => {:username => user} )
+  output << partial( :"filters")
+  output << partial( :"userpage", :locals => {:user => user, :desc => 'I am a music god and prodigy. All at the same time'})
   output << partial( :"pics")
   output << partial( :"index-bottom")
   output
@@ -52,3 +77,4 @@ get '/stylesheets/*.sass' do
   filename = params[:splat].first
   sass filename.to_sym
 end
+
