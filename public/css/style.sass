@@ -16,8 +16,22 @@ body
   // background-color: #fff
   background-color: $filters-background
   overflow: hidden
+$green: #008800
+a
+  color: $green
+  &:hover
+    color: darken($green, 15%)
 
 $container_width: 900px
+
+.like-count
+  font-size: 0.9em
+.heart
+  &:hover
+    position: relative
+    top: -1px
+  &:active
+    top: -2px
 
 .column1,.column2,.column3
   padding: 10px
