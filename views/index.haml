@@ -1,43 +1,55 @@
 .container
-  #black-background
-    #black-background-specific
-    #popup
-      #popup-left
+  .black-background#photo-popup-view
+    .black-background-specific
+    .popup
+      .popup-left
         %img{:src=>"img/lake_fall.jpg"}
-      #popup-right
-        %div#popup-username-like
-          %div#popup-username
+      .popup-right
+        %div.popup-username-like
+          %div.popup-username
             %a{:href=>"/user", :style=>"font-size:1.1em;"}
               amadeus
-          %div#popup-like
+          %div.popup-like
             %img.heart{:src=>"img/heart_unselected.png"}
             %span.like-count
               12
-        %div#popup-location
-          %a#map-popup{:style=>"text-decoration:underline;cursor:pointer;"}
+        %div.popup-location
+          %a.map-popup{:style=>"text-decoration:underline;cursor:pointer;"}
             Berkeley, CA&nbsp;&nbsp;&nbsp;
             %img{:src=>"img/pin.png", :style=>"float:right;position:relative;top:2px;left:-128px;width:15px;margin-right:2px;"}
-        %div#popup-description
+        %div.popup-description
           "Beautiful lake with a nice view of the fall leaf colors."
         .vspacer15
         .hr-divider
-        %div#popup-comment-box
+        %div.popup-comment-box
           .popup-comment
             %span.popup-comment-username
-              %a
+              %a{:href=>"/userchopin"}
                 &nbsp;chopin:
             %span.popup-comment-text
               Looks inspiring for composing music!
           .popup-comment
             %span.popup-comment-username
-              %a
+              %a{:href=>"/userliszt"}
                 &nbsp;liszt:
             %span.popup-comment-text
               Red, yellow, orange colors look sick.
-          %div#popup-comment-input
+          %div.popup-comment-input
             %input{:type=>"text", :style=>"width:170px;height:13px;font-size:0.7em;position:relative;top:2px;margin-left:7px;"}
             %a.btn.btn-mini{:style=>"position:relative;top:-3px;"}
               comment
+  .black-background#map-popup-view
+    .black-background-specific
+    .popup
+      .popup-left
+        %img{:src=>"img/map.png"}
+      .popup-right
+        .map-pin{:style=>"cursor:pointer;"}
+          %img{:src=>"img/pin.png"}
+        .map-describe
+          Drag pin to update the landskape's location.
+          %a.btn.btn-warning#update-location{:style=>"width:130px;margin:0 auto;position:relative;top:100px;display:block;"}
+            Update Location
   %h3
     Viewing:
     %span#viewing trending

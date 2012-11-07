@@ -1,9 +1,10 @@
 .container
-  %h1
+  %h3
     #{user}'s photos
-  %div More Info about #{user}:
-  .user-bio{:style => "height: 0px"}
+  %div{:style=>"padding-left:10px;"}
+    More Info about #{user}:
+  .user-bio{:style => "height: 0px;"}
     #{desc}
-  .show-bar
+  .show-bar{:style=>"position:relative;left:10px;width:880px;margin-bottom:10px;"}
     .btn#showbutton
       show

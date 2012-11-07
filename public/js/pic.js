@@ -1,5 +1,5 @@
 $(function() {
-  $("#black-background").hide();
+  $(".black-background").hide();
   // document.ready() opening
 
   $(".pic-thumb").hover(
@@ -36,7 +36,7 @@ $(function() {
   });
   // document.ready() closing
   
-  $("#popup .heart").click(function() {
+  $(".popup .heart").click(function() {
     $love_img = $(this);
     $love_img_src = $love_img.attr('src');
 
@@ -50,26 +50,32 @@ $(function() {
     }
   });
 
-  $(".pic-thumb .pic").click(function() {
-    $("#black-background").show();
-  });
-  $("#black-background-specific").click(function() {
-    $("#black-background").hide();
-  });
-
   $(".filters-item").click(function() {
     $("#viewing").text($(this).text());
   });
 
-  $("#map-popup").click(function() {
-    original_popup_left_img_src = $("#popup-left img").attr('src');
-    original_popup_right_html = $("#popup-right").html();
-    $("#popup-left img").attr('src','img/map.png');
-    $("#popup-right").html('<div id="map-pin" style="cursor:pointer;"><img src="img/pin.png"/></div><div id="map-describe">Drag pin to update the landskape\'s location.</div><a class="btn btn-warning" id="update-location" style="width:130px;margin:0 auto;position:relative;top:100px;display:block;">Update Location</a>');
-    $("#map-pin").draggable();
+
+  $(".pic-thumb .pic").click(function() {
+    $("#photo-popup-view").show();
+  });
+	$(".comment-button").click(function() {
+		$("#photo-popup-view").show();
+	});
+  $(".black-background-specific").click(function() {
+    $(".black-background").hide();
+  });
+
+	$("#photo-popup-view a.btn-mini").click(function() {
+		newtext = $(this).siblings("input[type='text']").val();
+		$(".popup-comment-box").append('<div class="popup-comment"><span class="popup-comment-username"><a>amadeus</a>: </span><span class="popup-comment-text">'+newtext+'</span></div>');
+	});
+
+   $(".map-pin").draggable();
+
+  $(".map-popup").click(function() {
+		$("#map-popup-view").show();
     $("#update-location").click(function() {
-      $("#popup-left img").attr('src',original_popup_left_img_src);
-      $("#popup-right").html(original_popup_right_html);
+			$("#map-popup-view").hide();
     });
   });
 });
