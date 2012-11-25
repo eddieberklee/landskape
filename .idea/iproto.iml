@@ -4,15 +4,6 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="bundle (v0.0.1, ruby-1.8.7-p358) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="bundler (v1.2.1, ruby-1.8.7-p358) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="haml (v3.1.7, ruby-1.8.7-p358) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rack (v1.4.1, ruby-1.8.7-p358) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="rack-protection (v1.2.0, ruby-1.8.7-p358) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.1, ruby-1.8.7-p358) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sinatra (v1.3.3, ruby-1.8.7-p358) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="sinatra-partial (v0.3.2, ruby-1.8.7-p358) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="tilt (v1.3.3, ruby-1.8.7-p358) [gem]" level="application" />
   </component>
 </module>
 

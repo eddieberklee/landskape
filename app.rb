@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'sass'
 require 'sinatra/partial'
+require 'public/db' # Instantiate the database.
 
 # Set the static files
 set :public_folder, File.dirname(__FILE__) + '/public'
