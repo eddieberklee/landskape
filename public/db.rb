@@ -1,16 +1,19 @@
 require 'active_record'
 require 'uri'
+require 'pg'
 
 puts 'I am a db and should be run'
 
-db = URI.parse(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
+db = URI.parse(ENV['DATABASE_URL'] || 'postgres://ec2-23-21-161-255.compute-1.amazonaws.com/ddqa61sv0v5pnm')
 
 puts db;
 #database = 'ddqa61sv0v5pnm';
 #host = 'ec2-23-21-161-255.compute-1.amazonaws.com';
-#port = 5432;
-#user = 'xpvzwbwbbksqvx';
-#password = 'Wt5HmBrhT0XqpQoBF2RUBODKdr';
+db.port = 5432;
+#db.user = 'xpvzwbwbbksqvx';
+#db.password = 'Wt5HmBrhT0XqpQoBF2RUBODKdr';
+db.user = 'xpvzwbwbbksqvx';
+db.password = 'Wt5HmBrhT0XqpQoBF2RUBODKdr';
 
 ActiveRecord::Base.establish_connection(
     :adapter  => db.scheme == 'postgres' ? 'postgresql' : db.scheme,
