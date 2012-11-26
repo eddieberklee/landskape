@@ -64,25 +64,25 @@ class User < ActiveRecord::Base
 end
 
 class Photo < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :users
   has_many :comments
   has_many :likes
 end
 
 class Comment < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :photo
+  belongs_to :users
+  belongs_to :photos
 end
 
 class Like < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :photo
+  belongs_to :users
+  belongs_to :photos
 end
 
-user = User.create(:username => 'James', :password => 'gobears')
-photo = user.photos.create(:title => 'El Capitan', :description => 'So beautiful etc.',
-                           :city => 'Yosemite', :country => 'USA', :state => 'CA',
-                           :file_location => '/pics/elcapitan.png')
+#user = User.create(:username => 'James', :password => 'gobears')
+#photo = user.photos.create(:title => 'El Capitan', :description => 'So beautiful etc.',
+#                           :city => 'Yosemite', :country => 'USA', :state => 'CA',
+#                           :file_location => '/pics/elcapitan.png')
 
 #album = Album.create(:title => 'Black and Blue',
 #                     :performer => 'The Rolling Stones')
